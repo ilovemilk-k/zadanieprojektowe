@@ -1,20 +1,21 @@
-﻿// zadanieprojektowe.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
-//
+﻿#include <iostream>
+using namespace std;
 
-#include <iostream>
+int main() {
+	int tab[] = { 3, 1, -5, 0, 2, 1 };
+	int rozmiar = sizeof(tab) / sizeof(tab[0]);
+	cout << "\nSize: " << rozmiar<<endl;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+	for (int i = 0; i < rozmiar - 2; i++) {
+		if (tab[i] + tab[i + 1] < tab[i + 2]) {
+			cout << "[" << tab[i] << ", " << tab[i + 1] << "]\n";
+		}
+	}
+
+	
+
+	// Program zeby dzialal dla dowolnej tablicy musi uwzglednic
+	//	1. Liczba w tablicy elementow powinna byc przynajmniej 3
+	//	2. 
+	return 0;
 }
-
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
-
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
