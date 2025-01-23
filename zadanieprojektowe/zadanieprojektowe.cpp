@@ -11,6 +11,17 @@ void wyszukaj(int tab[], int n) {
 		}
 	}
 }
+void wyszukaj2(int tab[],int n) {
+	int* sumy= new int[n - 2];
+	for (int i = 0; i < n - 2; i++) {
+		sumy[i] = tab[i] + tab[i + 1];
+	}
+	for (int i = 2; i < n;i++) {
+		if (sumy[i - 2] < tab[i]) {
+			cout << "[" << tab[i - 2] << ", " << tab[i - 1] << "]\n";
+		}
+	}
+}
 int main() {
 
 
@@ -25,6 +36,7 @@ int main() {
 	}
 	cout << endl;
 	wyszukaj(tab, size);
+	wyszukaj2(tab, size);
  
 	return 0;
 }
